@@ -265,6 +265,15 @@
 										let line = decoder.decode(new Uint8Array(logLine));
 										logLine = [];
 										console.log(line);
+
+										// codigo para capturar stdout
+										if (window.GO_WEBASSEMBLY_STD_CALLBACK) {
+											try {
+												window.GO_WEBASSEMBLY_STD_CALLBACK(line);
+											} catch (error) {
+												console.debug(error);
+											}
+										}
 									} else {
 										logLine.push(c);
 									}
