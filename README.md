@@ -12,9 +12,9 @@ Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges:
 TODO: Fazer todas implementações
 TODO: Criar links para descrições e soluções
 - 💻 fib 
-    - **[Descrição do problema](./)**
-    - normal
-    - memoization
+    - **[Descrição do problema](#-fib)**
+    - [normal](./01-fib/main.go)
+    - [memoization](./01A-fib-memoization/main.go)
     - tabulation
 
 - 💻 gridTraveler
@@ -68,6 +68,17 @@ TODO: Criar links para descrições e soluções
 ## ⭐️ Descrição dos problemas ⭐️
 TODO: Preencher descrição dos problemas
 ### 💻 fib
+Write a function `fib(n)` that takes in a number as an argument.
+The function should return the n-th number of the Fibonacci sequence.
+
+The 1st and 2nd number of the sequence is 1.
+To generate the next number of the sequence, we sum the previous two.
+
+```txt
+n:      1, 2, 3, 4, 5, 6, 7,  8,  9,  ...
+fib(n): 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+```
+
 ### 💻 gridTraveler
 ### 💻 tabulation
 ### 💻 canSum
