@@ -2,6 +2,10 @@
 
 <img src="freecodecamp-logo.jpg" alt="freecodecamp-logo" width="48"/>
 
+Esse repositório possui todo o conteudo do curso **Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges** implementado em **Go 1.16**.
+
+Além disso, possui também a página **[webassembly.html](https://guilhermerodrigues680.github.io/freeCodeCamp-coderbyte-dynamic-programming-course-golang-implementation/webassembly.html)** que executa as versões das implementações em Go compiladas para módulos WebAssembly direto do navegador de internet.
+
 
 ## 📚 Link do curso no YouTube 📚
 
