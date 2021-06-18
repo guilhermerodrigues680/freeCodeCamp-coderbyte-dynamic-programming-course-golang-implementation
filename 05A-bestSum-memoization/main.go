@@ -4,7 +4,11 @@ import (
 	"fmt"
 )
 
-func bestSum(targetSum int, numbers []int) []int {
+func bestSumAux(targetSum int, numbers []int, memo map[int][]int) []int {
+	if sc, found := memo[targetSum]; found {
+		return sc
+	}
+
 	if targetSum < 0 {
 		return nil
 	}
@@ -16,7 +20,7 @@ func bestSum(targetSum int, numbers []int) []int {
 	shortestCombination := []int(nil)
 	for _, num := range numbers {
 		remainder := targetSum - num
-		remainderCombination := bestSum(remainder, numbers)
+		remainderCombination := bestSumAux(remainder, numbers, memo)
 		if remainderCombination != nil {
 			combination := append(remainderCombination, num)
 			if shortestCombination == nil || len(combination) < len(shortestCombination) {
@@ -25,7 +29,13 @@ func bestSum(targetSum int, numbers []int) []int {
 		}
 	}
 
-	return shortestCombination
+	memo[targetSum] = shortestCombination
+	return memo[targetSum]
+}
+
+func bestSum(targetSum int, numbers []int) []int {
+	memo := make(map[int][]int)
+	return bestSumAux(targetSum, numbers, memo)
 }
 
 func main() {
