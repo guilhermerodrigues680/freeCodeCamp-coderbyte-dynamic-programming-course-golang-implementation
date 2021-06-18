@@ -27,16 +27,10 @@ TODO: Criar links para descrições e soluções
     - [memoization](./02A-gridTraveler-memoization/main.go)
     - tabulation
 
-- 💻 memoization
-    - **[Descrição do problema](./)**
-    - normal
-    - memoization
-    - tabulation
-
 - 💻 canSum
-    - **[Descrição do problema](./)**
-    - normal
-    - memoization
+    - **[Descrição do problema](#-canSum)**
+    - [normal](./03-canSum/main.go)
+    - [memoization](./03A-canSum-memoization/main.go)
     - tabulation
 
 - 💻 howSum
@@ -91,8 +85,15 @@ In how many ways can you travel to the goal on a grid with dimensions m * n?
 
 Write a function `gridTraveler(m, n)` that calculates this.
 
-### 💻 tabulation
 ### 💻 canSum
+Write a function `canSum(targetSum, numbers)` that takes in a targetSum and an array of numbers as arguments.
+
+The function should return a boolean indicating whether or not it is possible to generate the targetSum using numbers fro the array.
+
+You may use an element of the array as many times as needed.
+
+You way assume that all input numbers are nonnegative.
+
 ### 💻 howSum
 ### 💻 bestSum
 ### 💻 canConstruct
