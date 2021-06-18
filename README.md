@@ -34,9 +34,9 @@ TODO: Criar links para descrições e soluções
     - tabulation
 
 - 💻 howSum
-    - **[Descrição do problema](./)**
-    - normal
-    - memoization
+    - **[Descrição do problema](#-howSum)**
+    - [normal](./04-howSum/main.go)
+    - [memoization](./04A-howSum-memoization/main.go)
     - tabulation
 
 - 💻 bestSum
@@ -95,6 +95,12 @@ You may use an element of the array as many times as needed.
 You way assume that all input numbers are nonnegative.
 
 ### 💻 howSum
+Write a function `howSum(targetSum, numbers)` that takes in a targetSum and an array of numbers as arguments.
+
+The function should return an array containing any combination of elements that add up to exactly the targetSum. If there is no combination that adds up to the targetSum, the return null.
+
+If there are multiple combinations possible, you may return any single one.
+
 ### 💻 bestSum
 ### 💻 canConstruct
 ### 💻 countConstruct
