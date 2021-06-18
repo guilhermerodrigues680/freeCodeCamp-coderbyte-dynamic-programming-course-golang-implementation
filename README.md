@@ -22,9 +22,9 @@ TODO: Criar links para descrições e soluções
     - tabulation
 
 - 💻 gridTraveler
-    - **[Descrição do problema](./)**
-    - normal
-    - memoization
+    - **[Descrição do problema](#-gridTraveler)**
+    - [normal](./02-gridTraveler/main.go)
+    - [memoization](./02A-gridTraveler-memoization/main.go)
     - tabulation
 
 - 💻 memoization
@@ -84,6 +84,13 @@ fib(n): 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 ```
 
 ### 💻 gridTraveler
+Say that you are a traveler on a 2D grid. You begin in the top-left corner and your goal is to travel to bottom-right corner.
+You may only move down or right.
+
+In how many ways can you travel to the goal on a grid with dimensions m * n?
+
+Write a function `gridTraveler(m, n)` that calculates this.
+
 ### 💻 tabulation
 ### 💻 canSum
 ### 💻 howSum
