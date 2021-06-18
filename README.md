@@ -15,6 +15,7 @@ Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges:
 ## ⭐️ Implementações ⭐️
 TODO: Fazer todas implementações
 TODO: Criar links para descrições e soluções
+TODO: Renomear normal para `brute force`
 - 💻 fib 
     - **[Descrição do problema](#-fib)**
     - [normal](./01-fib/main.go)
@@ -40,9 +41,9 @@ TODO: Criar links para descrições e soluções
     - tabulation
 
 - 💻 bestSum
-    - **[Descrição do problema](./)**
-    - normal
-    - memoization
+    - **[Descrição do problema](#-bestSum)**
+    - [normal](./05-bestSum/main.go)
+    - [memoization](./05A-bestSum-memoization/main.go)
     - tabulation
 
 - 💻 canConstruct
@@ -102,6 +103,12 @@ The function should return an array containing any combination of elements that 
 If there are multiple combinations possible, you may return any single one.
 
 ### 💻 bestSum
+Write a function `bestSum(targetSum, numbers)` that takes in a targetSum and an array of numbers as arguments.
+
+The function should return an array containing the `shortest` combination of numbers that add up to exactly the targetSum.
+
+If there is a tie for the shortest combination, you may return any one of the shortest.
+
 ### 💻 canConstruct
 ### 💻 countConstruct
 ### 💻 allConstruct
