@@ -1,5 +1,5 @@
-// importScripts('wasm_exec_go.js'); // glue js file for go wasm
-importScripts('wasm_exec_tinygo.js'); // glue js file for tinygo wasm
+importScripts('wasm_exec_go.js'); // glue js file for go wasm
+// importScripts('wasm_exec_tinygo.js'); // glue js file for tinygo wasm
 
 if (!WebAssembly.instantiateStreaming) { // polyfill
   WebAssembly.instantiateStreaming = async (resp, importObject) => {
@@ -50,12 +50,11 @@ async function run(programName) {
   postMessageOk(`running webassembly ${programWasm}`, MESSAGE_TYPES.runningWebassembly);
 
   try {
-    const r = await go.run(result.instance);
-    console.log(r);
+    await go.run(result.instance);
   } catch (error) {
     const errStr = `${error.name}: ${error.message}`;
-    postMessageError(`webassembly ${programWasm} terminated with error: ${errStr}`, MESSAGE_TYPES.webassemblyTerminatedWithError);
     postMessageError(errStr, MESSAGE_TYPES.writeToStdout);
+    postMessageError(`webassembly ${programWasm} terminated with error: ${errStr}`, MESSAGE_TYPES.webassemblyTerminatedWithError);
     // console.debug('go.run error',error);
     return;
   }

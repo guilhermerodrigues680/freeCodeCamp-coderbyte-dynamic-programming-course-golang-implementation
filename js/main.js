@@ -19,6 +19,7 @@ wasmWorker.onmessage = function (ev) {
     case 'error_starting_webassembly':
       console.info(message.error);
       updateWebassemblyOutput(message.error, "wasm_exec");
+      updateWebassemblyOutput(`Fim: ${(new Date()).toLocaleTimeString()}`);
       break;
     case 'webassembly_started':
       console.info(message.message);
@@ -29,10 +30,12 @@ wasmWorker.onmessage = function (ev) {
       break;
     case 'webassembly_terminated_with_error':
       console.info(message.error);
+      updateWebassemblyOutput(`Fim: ${(new Date()).toLocaleTimeString()}`);
       enableRunButton();
       break;
     case 'webassembly_completed_successfully':
       console.info(message.message);
+      updateWebassemblyOutput(`Fim: ${(new Date()).toLocaleTimeString()}`);
       enableRunButton();
       break;
     default:

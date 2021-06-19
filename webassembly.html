@@ -12,8 +12,9 @@
   <p>Todas as implemetações deste repositório foram compiladas para módulos WebAssembly e executam direto do navegador de internet.</p>
   <p>
     Oservações: O WebAssembly possui um limite de recursão, então erros como
-    <code>RuntimeError: index out of bounds</code> e
-    <code>InternalError: too much recursion</code> podem ser relacionados a essa limitação.
+    <code>InternalError: too much recursion</code> ,
+    <code>RangeError: Maximum call stack size exceeded</code> e
+    <code>RuntimeError: index out of bounds</code> podem ser relacionados a essa limitação.
   </p>
   
   <select id="program-selector">
