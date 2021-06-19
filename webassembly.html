@@ -8,13 +8,17 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Implementações em Golang compiladas em WebAssembly</h1>
+  <h1>Implementações em Golang compiladas para módulos WebAssembly</h1>
   <p>Todas as implemetações deste repositório foram compiladas para módulos WebAssembly e executam direto do navegador de internet.</p>
   
-  <p class="remarks-text"><em>Observação: As implementações sem otimização podem deixar seu navegador lento.</em></p>
+  <select id="program-selector">
+    <option value="" selected disabled>Selecione um programa</option>
+    <option value="01-fib">01-fib</option>
+    <option value="01A-fib-memoization">01A-fib-memoization</option>
+  </select>
 
-  <button onClick="run();" id="runButton" disabled>Executar 01-fib</button>
-
+  <button id="runButton">Executar programa selecionado</button>
+  <button id="cancel-run-button">Cancelar execução</button>
   <textarea id="textarea-std" placeholder="Saída do programa..." disabled></textarea>
 
   <script src="js/main.js"></script>
