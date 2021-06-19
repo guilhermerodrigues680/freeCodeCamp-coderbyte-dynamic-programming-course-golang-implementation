@@ -50,10 +50,38 @@ wasmWorker.onmessageerror = function (ev) {
 
 //--------------------------------------------------------------------
 
-const programSelector = twoWayDataBinding(document.getElementById('program-selector'));
+const programSelectorDOM = document.getElementById('program-selector');
+const programSelector = twoWayDataBinding(programSelectorDOM);
 const textAreaStd = twoWayDataBinding(document.getElementById('textarea-std'));
 const runButton = document.getElementById('runButton');
 const cancelRunButton = document.getElementById('cancel-run-button');
+
+function fillAvailableWebassembly() {
+  const availableWebassemblys = [
+    "01-fib",
+    "01A-fib-memoization",
+    // "01B-fib-tabulation",
+    "02-gridTraveler",
+    "02A-gridTraveler-memoization",
+    // "02B-gridTraveler-tabulation",
+    "03-canSum",
+    "03A-canSum-memoization",
+    // "03B-canSum-tabulation",
+    "04-howSum",
+    "04A-howSum-memoization",
+    "05-bestSum",
+    "05A-bestSum-memoization",
+    "06-canConstruct",
+    "06A-canConstruct-memoization",
+  ];
+
+  for (const availableWasm of availableWebassemblys) {
+    const optionEl = document.createElement('option');
+    optionEl.innerText = availableWasm;
+    optionEl.value = availableWasm;
+    programSelectorDOM.appendChild(optionEl);
+  }
+}
 
 function twoWayDataBinding(el) {
   // 2 way data binding
@@ -99,3 +127,4 @@ function cancelRun() {
 
 runButton.addEventListener('click', () => run());
 cancelRunButton.addEventListener('click', () => cancelRun());
+fillAvailableWebassembly();
