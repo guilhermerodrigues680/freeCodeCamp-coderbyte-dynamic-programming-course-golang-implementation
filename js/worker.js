@@ -11,6 +11,7 @@ if (!WebAssembly.instantiateStreaming) { // polyfill
 const MESSAGE_TYPES = {
   writeToStdout: 'write_to_stdout',
   webassemblyStarted: 'webassembly_started',
+  errorStartingWebassembly: 'error_starting_webassembly',
   runningWebassembly: 'running_webassembly',
   webassemblyCompletedSuccessfully: 'webassembly_completed_successfully',
   webassemblyTerminatedWithError: 'webassembly_terminated_with_error',
@@ -40,6 +41,8 @@ async function run(programName) {
     result = await WebAssembly.instantiateStreaming(fetch(programPath), go.importObject);
     postMessageOk("webassembly started", MESSAGE_TYPES.webassemblyStarted);
   } catch (err) {
+    const errStr = `${err.name}: ${err.message}`;
+    postMessageError(`error starting webassembly: ${errStr}`, MESSAGE_TYPES.errorStartingWebassembly);
     console.error(err);
     return;
   }

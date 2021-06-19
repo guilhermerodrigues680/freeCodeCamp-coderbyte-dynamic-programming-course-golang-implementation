@@ -10,6 +10,11 @@
 <body>
   <h1>Implementações em Golang compiladas para módulos WebAssembly</h1>
   <p>Todas as implemetações deste repositório foram compiladas para módulos WebAssembly e executam direto do navegador de internet.</p>
+  <p>
+    Oservações: O WebAssembly possui um limite de recursão, então erros como
+    <code>RuntimeError: index out of bounds</code> e
+    <code>InternalError: too much recursion</code> podem ser relacionados a essa limitação.
+  </p>
   
   <select id="program-selector">
     <option value="" selected disabled>Selecione um programa</option>

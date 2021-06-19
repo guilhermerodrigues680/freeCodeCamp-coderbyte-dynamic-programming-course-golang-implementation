@@ -16,6 +16,10 @@ wasmWorker.onmessage = function (ev) {
         updateWebassemblyOutput(message.error, "stderr");
       }
       break;
+    case 'error_starting_webassembly':
+      console.info(message.error);
+      updateWebassemblyOutput(message.error, "wasm_exec");
+      break;
     case 'webassembly_started':
       console.info(message.message);
       break;
