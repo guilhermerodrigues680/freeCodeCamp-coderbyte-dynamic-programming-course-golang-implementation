@@ -49,6 +49,16 @@
 				const nl = outputBuf.lastIndexOf("\n");
 				if (nl != -1) {
 					console.log(outputBuf.substr(0, nl));
+
+					// codigo para capturar stdout
+					if (self.GO_WEBASSEMBLY_STD_CALLBACK) {
+						try {
+							self.GO_WEBASSEMBLY_STD_CALLBACK(outputBuf.substr(0, nl));
+						} catch (error) {
+							console.debug(error);
+						}
+					}
+
 					outputBuf = outputBuf.substr(nl + 1);
 				}
 				return buf.length;

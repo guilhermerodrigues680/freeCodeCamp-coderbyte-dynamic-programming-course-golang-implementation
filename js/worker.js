@@ -1,4 +1,5 @@
-importScripts('wasm_exec_tinygo.js');
+// importScripts('wasm_exec_go.js'); // glue js file for go wasm
+importScripts('wasm_exec_tinygo.js'); // glue js file for tinygo wasm
 
 if (!WebAssembly.instantiateStreaming) { // polyfill
   WebAssembly.instantiateStreaming = async (resp, importObject) => {
@@ -17,7 +18,7 @@ const MESSAGE_TYPES = {
 };
 const go = new Go();
 
-// Função Global de callback do `js/wasm_exec_tinygo.js`
+// Função Global de callback do `js/wasm_exec_tinygo.js` ou `js/wasm_exec_go.js`
 self.GO_WEBASSEMBLY_STD_CALLBACK = function (line) {
   postMessageOk(line, MESSAGE_TYPES.writeToStdout);
 };
