@@ -47,9 +47,9 @@ TODO: Renomear normal para `brute force`
     - tabulation
 
 - 💻 canConstruct
-    - **[Descrição do problema](./)**
-    - normal
-    - memoization
+    - **[Descrição do problema](#-canConstruct)**
+    - [normal](./06-canConstruct/main.go)
+    - [memoization](./06A-canConstruct-memoization/main.go)
     - tabulation
 
 - 💻 countConstruct
@@ -110,5 +110,11 @@ The function should return an array containing the `shortest` combination of num
 If there is a tie for the shortest combination, you may return any one of the shortest.
 
 ### 💻 canConstruct
+Write a function `canConstruct(target, wordBank)` that accepts a target string and an array of strings.
+
+The function should return a boolean indicating whether or not the `target` can be constructed by concatenating elements of the `wordBank` array.
+
+You may reuse elements of `wordBank` as many times as needed.
+
 ### 💻 countConstruct
 ### 💻 allConstruct
