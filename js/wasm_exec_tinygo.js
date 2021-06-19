@@ -267,9 +267,9 @@
 										console.log(line);
 
 										// codigo para capturar stdout
-										if (window.GO_WEBASSEMBLY_STD_CALLBACK) {
+										if (self.GO_WEBASSEMBLY_STD_CALLBACK) {
 											try {
-												window.GO_WEBASSEMBLY_STD_CALLBACK(line);
+												self.GO_WEBASSEMBLY_STD_CALLBACK(line);
 											} catch (error) {
 												console.debug(error);
 											}

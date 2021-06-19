@@ -1,0 +1,15 @@
+.remarks-text {
+  color: red;
+}
+
+#textarea-std{
+  display: block;
+  width: 95%;
+  min-height: 15rem;
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
+  font-family: monospace;
+  background-color: #2c2c32;
+  color: #00c3ff;
+  border: 0;
+}
