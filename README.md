@@ -60,13 +60,12 @@ TODO: Escrever complexidade `Big O` de `tempo` e `espaço`
     - tabulation
 
 - 💻 allConstruct
-    - **[Descrição do problema](./)**
-    - normal
-    - memoization
+    - **[Descrição do problema](#-allConstruct)**
+    - [normal](./08-allConstruct/main.go)
+    - [memoization](./08A-allConstruct-memoization/main.go)
     - tabulation
 
 ## ⭐️ Descrição dos problemas ⭐️
-TODO: Preencher descrição dos problemas
 ### 💻 fib
 Write a function `fib(n)` that takes in a number as an argument.
 The function should return the n-th number of the Fibonacci sequence.
@@ -125,3 +124,8 @@ The function should return the `number of ways` that the `target` can be constru
 You may reuse elements of `wordBank` as many times as needed.
 
 ### 💻 allConstruct
+Write a function `countConstruct(target, wordBank)` that accepts a target string and an array of strings.
+
+The function should return a 2D array containing `all of the ways` that the `target` can be constructed by concatenating elements of the `wordBank` array. Each element of the 2D array should represent one combination that constructs the `target`.
+
+You may reuse elements of `wordBank` as many times as needed.
