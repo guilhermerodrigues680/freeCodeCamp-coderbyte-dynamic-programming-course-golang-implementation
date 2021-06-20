@@ -21,7 +21,7 @@ TODO: Escrever complexidade `Big O` de `tempo` e `espaço`
     - **[Descrição do problema](#-fib)**
     - [normal](./01-fib/main.go)
     - [memoization](./01A-fib-memoization/main.go)
-    - tabulation
+    - [tabulation](./01B-fib-tabulation/main.go)
 
 - 💻 gridTraveler
     - **[Descrição do problema](#-gridTraveler)**
