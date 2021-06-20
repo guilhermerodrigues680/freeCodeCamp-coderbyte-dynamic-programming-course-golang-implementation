@@ -16,6 +16,7 @@ Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges:
 TODO: Fazer todas implementações
 TODO: Criar links para descrições e soluções
 TODO: Renomear normal para `brute force`
+TODO: Escrever complexidade `Big O` de `tempo` e `espaço`
 - 💻 fib 
     - **[Descrição do problema](#-fib)**
     - [normal](./01-fib/main.go)
@@ -53,9 +54,9 @@ TODO: Renomear normal para `brute force`
     - tabulation
 
 - 💻 countConstruct
-    - **[Descrição do problema](./)**
-    - normal
-    - memoization
+    - **[Descrição do problema](#-countConstruct)**
+    - [normal](./07-countConstruct/main.go)
+    - [memoization](./07A-countConstruct-memoization/main.go)
     - tabulation
 
 - 💻 allConstruct
@@ -117,4 +118,10 @@ The function should return a boolean indicating whether or not the `target` can 
 You may reuse elements of `wordBank` as many times as needed.
 
 ### 💻 countConstruct
+Write a function `countConstruct(target, wordBank)` that accepts a target string and an array of strings.
+
+The function should return the `number of ways` that the `target` can be constructed by concatenating elements of the `wordBank` array.
+
+You may reuse elements of `wordBank` as many times as needed.
+
 ### 💻 allConstruct
