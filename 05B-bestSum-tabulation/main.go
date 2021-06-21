@@ -14,13 +14,9 @@ func bestSum(targetSum int, numbers []int) []int {
 			for _, num := range numbers {
 				if i+num <= targetSum {
 					valINum := tab[i+num]
-					if valINum == nil {
-						tab[i+num] = append(current, num)
-					} else {
-						updatedVal := append(current, num)
-						if len(updatedVal) < len(valINum) {
-							tab[i+num] = updatedVal
-						}
+					updatedVal := append(current, num)
+					if valINum == nil || len(updatedVal) < len(valINum) {
+						tab[i+num] = updatedVal
 					}
 				}
 			}
