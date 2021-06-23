@@ -13,57 +13,57 @@ Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges:
 [www.youtube.com/watch?v=oBt53YbR9Kk](https://www.youtube.com/watch?v=oBt53YbR9Kk)
 
 ## ⭐️ Implementações ⭐️
-TODO: Fazer todas implementações
-TODO: Criar links para descrições e soluções
 TODO: Renomear normal para `brute force`
+
 TODO: Escrever complexidade `Big O` de `tempo` e `espaço`
+
 - 💻 fib 
     - **[Descrição do problema](#-fib)**
-    - [normal](./01-fib/main.go)
+    - [brute force](./01-fib/main.go)
     - [memoization](./01A-fib-memoization/main.go)
     - [tabulation](./01B-fib-tabulation/main.go)
 
 - 💻 gridTraveler
     - **[Descrição do problema](#-gridTraveler)**
-    - [normal](./02-gridTraveler/main.go)
+    - [brute force](./02-gridTraveler/main.go)
     - [memoization](./02A-gridTraveler-memoization/main.go)
-    - tabulation
+    - [tabulation](./02B-gridTraveler-tabulation/main.go)
 
 - 💻 canSum
     - **[Descrição do problema](#-canSum)**
-    - [normal](./03-canSum/main.go)
+    - [brute force](./03-canSum/main.go)
     - [memoization](./03A-canSum-memoization/main.go)
-    - tabulation
+    - [tabulation](./03B-canSum-tabulation/main.go)
 
 - 💻 howSum
     - **[Descrição do problema](#-howSum)**
-    - [normal](./04-howSum/main.go)
+    - [brute force](./04-howSum/main.go)
     - [memoization](./04A-howSum-memoization/main.go)
-    - tabulation
+    - [tabulation](./04B-howSum-tabulation/main.go)
 
 - 💻 bestSum
     - **[Descrição do problema](#-bestSum)**
-    - [normal](./05-bestSum/main.go)
+    - [brute force](./05-bestSum/main.go)
     - [memoization](./05A-bestSum-memoization/main.go)
-    - tabulation
+    - [tabulation](./05B-bestSum-tabulation/main.go)
 
 - 💻 canConstruct
     - **[Descrição do problema](#-canConstruct)**
-    - [normal](./06-canConstruct/main.go)
+    - [brute force](./06-canConstruct/main.go)
     - [memoization](./06A-canConstruct-memoization/main.go)
-    - tabulation
+    - [tabulation](./06B-canConstruct-tabulation/main.go)
 
 - 💻 countConstruct
     - **[Descrição do problema](#-countConstruct)**
-    - [normal](./07-countConstruct/main.go)
+    - [brute force](./07-countConstruct/main.go)
     - [memoization](./07A-countConstruct-memoization/main.go)
-    - tabulation
+    - [tabulation](./07B-countConstruct-tabulation/main.go)
 
 - 💻 allConstruct
     - **[Descrição do problema](#-allConstruct)**
-    - [normal](./08-allConstruct/main.go)
+    - [brute force](./08-allConstruct/main.go)
     - [memoization](./08A-allConstruct-memoization/main.go)
-    - tabulation
+    - [tabulation](./08B-allConstruct-tabulation/main.go)
 
 ## ⭐️ Descrição dos problemas ⭐️
 ### 💻 fib
