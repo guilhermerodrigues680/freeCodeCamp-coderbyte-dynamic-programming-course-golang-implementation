@@ -1,11 +1,71 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+.title {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.limitations {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #fc4a4a;
+}
+
 #textarea-std{
   display: block;
-  width: 95%;
-  min-height: 15rem;
+  width: 100%;
+  min-height: 30vh;
   padding: 0.25rem 1rem;
   font-size: 0.875rem;
   font-family: monospace;
-  background-color: #2c2c32;
+  background-color: #282c34;
   color: #00c3ff;
   border: 0;
+  resize: vertical;
+}
+
+.program-selected-code-container {
+  height: 40vh;
+  overflow-y: scroll;
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+  margin: 0.25rem 0;
+  background-color: #282c34;
+}
+
+.program-selected-code-container > pre {
+  margin: 0;
+}
+
+#program-selected-code {
+  overflow-x: visible !important;
 }

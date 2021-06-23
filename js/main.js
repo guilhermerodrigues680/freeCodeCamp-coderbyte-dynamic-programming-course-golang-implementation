@@ -119,6 +119,26 @@ function run() {
   textAreaStd.value = `-> Rodando programa ${programName}. Início: ${(new Date()).toLocaleTimeString()}\n`;
 };
 
+async function getCodeOfSelectedProgram() {
+  const programName = programSelector.value;
+  let text;
+  try {
+    const response = await fetch(`${programName}/main.go`);
+    text = await response.text();
+  } catch (error) {
+    console.debug(error);
+  }
+
+  const codeDOM = document.getElementById('program-selected-code');
+  codeDOM.innerHTML = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+  hljs.highlightAll();
+}
+
 function updateWebassemblyOutput(message, out="stdout") {
   if (out === "stdout") {
     textAreaStd.value += `${message}\n`;
@@ -134,4 +154,5 @@ function cancelRun() {
 
 runButton.addEventListener('click', () => run());
 cancelRunButton.addEventListener('click', () => cancelRun());
+programSelectorDOM.addEventListener('change', () => getCodeOfSelectedProgram());
 fillAvailableWebassembly();
